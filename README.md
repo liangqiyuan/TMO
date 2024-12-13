@@ -7,21 +7,21 @@
 
 ## 👨‍🍳 Use Case: Kitchen Activity Assistance with LLM
 
-<img src="figures/Local-Cloud.png" alt="overview" width="400"/>
-
 Imagine a scenario where an intelligent assistant helps you track activities in your kitchen:
 
 - **User:** *Where did I put my dishes?*
 - **RL Agent:** Processes first-person and overhead camera views -> Sends to Cloud LLM.
 - **Cloud LLM:** *I see that you are in the kitchen. There are dishes on the counter next to the sink, likely just placed there after washing. Would you like me to turn on the dishwasher so you can put them away?*
 
+<img src="figures/Local-Cloud.png" alt="overview" width="400"/>
+
 ---
 
 ## 🔥 Our Framework
 
-<img src="figures/RL.png" alt="overview" width="400"/>
-
 We present **LCIO** (Local-Cloud Inference Offloading), a framework designed to optimize **response quality**, **latency**, and **cost efficiency** for large language models (LLMs) in **multi-modal, multi-task, and multi-dialogue settings**. LCIO dynamically adapts to diverse conversational demands across tasks such as assistance, query, recommendation, and message editing. To enhance performance, we propose resource-constrained RL, which selects the best LLMs and modalities for inference, balancing quality, latency, and cost. RCRL also integrates user prompt associations with multi-modal data to effectively manage task connections in decision-making.
+
+<img src="figures/RL.png" alt="overview" width="400"/>
 
 ---
 
