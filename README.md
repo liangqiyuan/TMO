@@ -3,7 +3,6 @@
 [![python](https://img.shields.io/badge/Python_3.10-306998?logo=python&logoColor=FFD43B)](https://www.python.org/downloads/release/python-31012/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-750014.svg)](https://opensource.org/licenses/MIT) 
 
----
 
 ## 👨‍🍳 Use Case: Kitchen Activity Assistance with LLM
 
@@ -17,7 +16,6 @@ Imagine a scenario where an intelligent assistant helps you track activities in 
     <img src="figures/Local-Cloud.png" alt="overview" style="width:60%;"/>
 </div>
 
----
 
 ## 🔥 Our Framework
 
@@ -27,7 +25,6 @@ We present **LCIO** (Local-Cloud Inference Offloading), a framework designed to 
     <img src="figures/RL.png" alt="overview" style="width:60%;"/>
 </div>
 
----
 
 ## 🖥️ Prerequisites
 
@@ -46,7 +43,6 @@ stable_baselines3 == 2.2.1
 scikit-learn == 1.5.1
 ```
 
----
 
 ## 📚 M4AI Dataset
 
@@ -60,7 +56,6 @@ We introduce **M4AI**, a comprehensive dataset capturing the **four multi-** ele
     <img src="figures/M4A1.png" alt="overview" style="width:60%;"/>
 </div>
 
----
 
 ## 🗂️ Folder Structure
 ```
@@ -80,7 +75,6 @@ LCIO/
   - `models.py`: Includes model definitions such as `PPOLagrangian`, `A2CLagrangian`, and `DQNLagrangian`.
 - **`data/`**: Stores the M4AI dataset.
 
----
 
 ## 🏃‍♂ Run Code
 
@@ -89,7 +83,6 @@ Run the framework with the following command:
 python main.py --device='cuda:0'
 ```
 
----
 
 ## 🙏 Acknowledgement
 
