@@ -14,7 +14,7 @@ Imagine a scenario where an intelligent assistant helps you track activities in 
 - **Cloud LLM:** *I see that you are in the kitchen. There are dishes on the counter next to the sink, likely just placed there after washing. Would you like me to turn on the dishwasher so you can put them away?*
 
 <div align="center">
-    <img src="figures/Local-Cloud.png" alt="overview" width="400"/>
+    <img src="figures/Local-Cloud.png" alt="overview" style="width:50%;"/>
 </div>
 
 ---
@@ -23,7 +23,9 @@ Imagine a scenario where an intelligent assistant helps you track activities in 
 
 We present **LCIO** (Local-Cloud Inference Offloading), a framework designed to optimize **response quality**, **latency**, and **cost efficiency** for LLMs in **multi-modal, multi-task, and multi-dialogue settings**. LCIO dynamically adapts to diverse conversational demands across tasks such as assistance, query, recommendation, and message editing. To enhance performance, we propose resource-constrained RL, which selects the best LLMs and modalities for inference, balancing quality, latency, and cost. RCRL also integrates user prompt associations with multi-modal data to effectively manage task connections in decision-making.
 
-<img src="figures/RL.png" alt="overview" width="400"/>
+<div align="center">
+    <img src="figures/RL.png" alt="overview" style="width:50%;"/>
+</div>
 
 ---
 
@@ -54,7 +56,9 @@ We introduce **M4AI**, a comprehensive dataset capturing the **four multi-** ele
 3. **Multi-dialogue:** Contains sequences of 2–5 dialogues.
 4. **Multi-LLM:** Incorporates four LLMs tailored for different purposes.
 
-<img src="figures/M4A1.png" alt="overview" width="400"/>
+<div align="center">
+    <img src="figures/M4A1.png" alt="overview" style="width:50%;"/>
+</div>
 
 ---
 
