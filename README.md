@@ -46,7 +46,7 @@ scikit-learn == 1.5.1
 
 ## 📚 M4AI Dataset
 
-We introduce **M4AI**, a comprehensive dataset capturing the **four multi-** aspects crucial for our framework:
+We introduce **M4AI**, a comprehensive dataset capturing the **four multi-** elements **all in one** dataset:
 1. **Multi-modal:** Includes three different view images.
 2. **Multi-task:** Features four distinct tasks.
 3. **Multi-dialogue:** Contains sequences of 2–5 dialogues.
