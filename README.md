@@ -11,7 +11,7 @@
 
 Imagine a scenario where an intelligent assistant helps you track activities in your kitchen:
 
-- **User:** *Where did I put my dishes?*
+- **User:** <p style="font-family: 'Comic Sans MS', cursive; font-size: 16px;">Where did I put my dishes?</p>
 - **RL Agent:** Processes first-person and overhead camera views -> Sends to Cloud LLM.
 - **Cloud LLM:** *I see that you are in the kitchen. There are dishes on the counter next to the sink, likely just placed there after washing. Would you like me to turn on the dishwasher so you can put them away?*
 
