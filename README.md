@@ -82,7 +82,7 @@ LCIO/
 
 ---
 
-## 🏃‍♂️‍➡️ Run Code
+## 🏃‍♂ Run Code
 
 Run the framework with the following command:
 ```bash
