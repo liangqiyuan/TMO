@@ -7,7 +7,7 @@
 
 ## 👨‍🍳 Use Case: Kitchen Activity Assistance with LLM
 
-![overview](figures/Local-Cloud.png)
+<img src="figures/Local-Cloud.png" alt="overview" width="400"/>
 
 Imagine a scenario where an intelligent assistant helps you track activities in your kitchen:
 
