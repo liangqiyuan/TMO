@@ -13,7 +13,9 @@ Imagine a scenario where an intelligent assistant helps you track activities in 
 - **RL Agent:** Processes first-person and overhead camera views -> Sends to Cloud LLM.
 - **Cloud LLM:** *I see that you are in the kitchen. There are dishes on the counter next to the sink, likely just placed there after washing. Would you like me to turn on the dishwasher so you can put them away?*
 
-<img src="figures/Local-Cloud.png" alt="overview" width="400" style="display: block; margin: auto;" />
+<div align="center">
+    <img src="figures/Local-Cloud.png" alt="overview" width="400"/>
+</div>
 
 ---
 
