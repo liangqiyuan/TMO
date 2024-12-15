@@ -21,7 +21,7 @@ warnings.filterwarnings('ignore', category=RuntimeWarning)
 if __name__ == '__main__':
     args = args_parser()
 
-    with open('data/M4A1_Dataset_Phi3_GPT4o.json', 'r') as f:
+    with open('../data/M4A1.json', 'r') as f:
         dataset = json.load(f)
 
     weights = [args.alpha, args.beta_association, args.beta_latency, args.beta_usage]
