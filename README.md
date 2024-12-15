@@ -61,15 +61,18 @@ We introduce **M4AI**, a comprehensive dataset capturing the **four multi-** ele
 ```
 LCIO/
 │   README.md
-│   requirements.txt    
+│   requirements.txt
 │
-└─── main/
-    │   main.py
-    │   models.py
-    │   options.py
-    │   Main_Results.pkl -- saved results here
-    └─── data/
-        └─── M4A1.json
+├─── main/
+│   │   main.py
+│   │   models.py
+│   │   utils.py
+│   │   options.py 
+│   └─── results/
+│       │   Main_Results.pkl
+│
+├─── data/
+│   │   M4A1.json
 ```
 
 - **`main/`**: Contains the primary codebase.
