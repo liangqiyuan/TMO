@@ -88,7 +88,6 @@ LCIO/
 
 Run the framework with the following command:
 ```bash
-pip install -r requirements.txt
 python main/main.py
 ```
 
