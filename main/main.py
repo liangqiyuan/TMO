@@ -52,5 +52,6 @@ if __name__ == '__main__':
                 if should_process_model(model_name, resource_constraint):
                     process_model(model_key, model_cls, train_env, test_env, latency_budget, usage_budget, results)
 
-    with open('Main_Results.pkl', 'wb') as f:
+    with open('results/Main_Results.pkl', 'wb') as f:
         pickle.dump(results, f)
+
