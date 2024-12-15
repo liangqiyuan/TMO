@@ -22,7 +22,7 @@ constraint_lambda = args.constraint_lambda
 
 SelfPPO = TypeVar("SelfPPO", bound="PPO")
         
-class PPOLagrangian(OnPolicyAlgorithm):
+class RC_PPO(OnPolicyAlgorithm):
     policy_aliases: ClassVar[Dict[str, Type[BasePolicy]]] = {
         "MlpPolicy": ActorCriticPolicy,
         "CnnPolicy": ActorCriticCnnPolicy,
@@ -245,7 +245,7 @@ class PPOLagrangian(OnPolicyAlgorithm):
 
 SelfA2C = TypeVar("SelfA2C", bound="A2C")
 
-class A2CLagrangian(OnPolicyAlgorithm):
+class RC_A2C(OnPolicyAlgorithm):
     policy_aliases: ClassVar[Dict[str, Type[BasePolicy]]] = {
         "MlpPolicy": ActorCriticPolicy,
         "CnnPolicy": ActorCriticCnnPolicy,
@@ -406,7 +406,7 @@ class A2CLagrangian(OnPolicyAlgorithm):
 
 SelfDQN = TypeVar("SelfDQN", bound="DQN")
 
-class DQNLagrangian(OffPolicyAlgorithm):
+class RC_DQN(OffPolicyAlgorithm):
 
     policy_aliases: ClassVar[Dict[str, Type[BasePolicy]]] = {
         "MlpPolicy": MlpPolicy,
