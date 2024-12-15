@@ -280,7 +280,7 @@ def process_model(model_key, model_cls, train_env, test_env, latency_budget, usa
         results.setdefault(model_key, []).append(evaluate(env=test_env, latency_budget=latency_budget, usage_budget=usage_budget, model=model, name=model_key[1]))
 
 def should_process_model(model_name, resource_constraint):
-    if 'Lagrangian' not in model_name and resource_constraint == False:
+    if 'RC' not in model_name and resource_constraint == False:
         return True
-    elif 'Lagrangian' in model_name:
+    elif 'RC' in model_name:
         return resource_constraint
