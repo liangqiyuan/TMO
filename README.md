@@ -85,7 +85,7 @@ LCIO/
 
 Run the framework with the following command:
 ```bash
-python main.py --device='cuda:0'
+python main/main.py
 ```
 
 
