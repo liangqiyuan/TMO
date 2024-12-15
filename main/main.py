@@ -7,7 +7,7 @@ import random
 import pickle
 import re
 import torch
-from models import PPOLagrangian, A2CLagrangian, DQNLagrangian
+from models import RC_PPO, RC_A2C, RC_DQN
 from sklearn.neighbors import NearestNeighbors
 
 from options import args_parser
@@ -36,7 +36,7 @@ if __name__ == '__main__':
     Resource_Constraints = [False, True]
     models = {'Random': None, 'Local': None, 'Cloud': None, 
             'PPO': PPO, 'A2C': A2C, 'DQN': DQN,
-            'PPOLagrangian': PPOLagrangian, 'A2CLagrangian': A2CLagrangian, 'DQNLagrangian': DQNLagrangian}
+            'RC_PPO': RC_PPO, 'RC_A2C': RC_A2C, 'RC_DQN': RC_DQN}
     
     results = {}
     Train = {}
