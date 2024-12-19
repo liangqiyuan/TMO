@@ -52,6 +52,8 @@ We introduce **M4AI**, a comprehensive dataset capturing the **four multi-** ele
 3. **Multi-Dialogue:** Contains sequences of 2–5 dialogues.
 4. **Multi-LLM:** Incorporates four LLMs tailored for different purposes.
 
+*Currently, only a sample dataset with 100 examples is provided. The full dataset will be released upon the acceptance of the paper.*
+
 <div align="center">
     <img src="figures/M4A1.png" alt="overview" style="width:60%;"/>
 </div>
