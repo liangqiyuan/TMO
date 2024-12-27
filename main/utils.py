@@ -69,9 +69,9 @@ def split_dataset(data, test_ratio=0.2):
     train_set = shuffled_data[test_size:]
     return train_set, test_set
 
-class CustomEnv(gym.Env):
+class M4A1_Env(gym.Env):
     def __init__(self, dataset, weights, local_device, cloud_server, latency_budget, usage_budget, Resource_Constraint, time_span, Train):
-        super(CustomEnv, self).__init__()
+        super(M4A1_Env, self).__init__()
         self.dataset = preprocess_data(dataset)
         self.episodes = create_long_samples(self.dataset)
         self.weights = weights
