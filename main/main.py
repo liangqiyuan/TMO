@@ -44,9 +44,9 @@ if __name__ == '__main__':
     for _ in range(repeat):
         train_dataset, test_dataset = split_dataset(dataset, test_ratio=0.2)
         for resource_constraint in Resource_Constraints:
-            train_env = CustomEnv(train_dataset, weights, local_device, cloud_server, latency_budget, usage_budget, resource_constraint, time_span, Train=True)
+            train_env = M4A1_Env(train_dataset, weights, local_device, cloud_server, latency_budget, usage_budget, resource_constraint, time_span, Train=True)
             Train['rewards'] = train_env.rewards; Train['nn'] = train_env.nn
-            test_env = CustomEnv(test_dataset, weights, local_device, cloud_server, latency_budget, usage_budget, resource_constraint, time_span, Train)
+            test_env = M4A1_Env(test_dataset, weights, local_device, cloud_server, latency_budget, usage_budget, resource_constraint, time_span, Train)
             for model_name, model_cls in models.items():
                 model_key = (resource_constraint, model_name, model_cls)
                 if should_process_model(model_name, resource_constraint):
