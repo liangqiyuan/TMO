@@ -101,7 +101,7 @@ class RC_PPO(OnPolicyAlgorithm):
         self.target_kl = target_kl
 
         self.constraint_lambda = constraint_lambda 
-        self.CustomEnv = env
+        self.M4A1_Env = env
 
         if _init_setup_model:
             self._setup_model()
@@ -111,25 +111,25 @@ class RC_PPO(OnPolicyAlgorithm):
         excess_latency = []; excess_usage = []
         for obs, action in zip(rollout_data.observations, rollout_data.actions):
             total_latency = 0; total_usage = 0
-            for i in range(self.CustomEnv.time_span):
+            for i in range(self.M4A1_Env.time_span):
                 if obs[i*5] == 0:
-                    total_latency += self.CustomEnv.local_time
-                    total_usage += self.CustomEnv.local_usage_cost
+                    total_latency += self.M4A1_Env.local_time
+                    total_usage += self.M4A1_Env.local_usage_cost
                 elif obs[i*5] == 1:
                     modalities_from_state = obs[i*5+1:i*5+4].int().sum().item()
-                    total_latency += self.CustomEnv.cloud_time[modalities_from_state] 
-                    total_usage += self.CustomEnv.cloud_usage_cost[modalities_from_state] 
+                    total_latency += self.M4A1_Env.cloud_time[modalities_from_state] 
+                    total_usage += self.M4A1_Env.cloud_usage_cost[modalities_from_state] 
                 
             if action == 0:
-                total_latency += self.CustomEnv.local_time
-                total_usage += self.CustomEnv.local_usage_cost
+                total_latency += self.M4A1_Env.local_time
+                total_usage += self.M4A1_Env.local_usage_cost
             else:
                 modality_indices = action_to_modality_indices[action.item()]
-                total_latency += self.CustomEnv.cloud_time[len(modality_indices)]
-                total_usage += self.CustomEnv.cloud_usage_cost[len(modality_indices)]
+                total_latency += self.M4A1_Env.cloud_time[len(modality_indices)]
+                total_usage += self.M4A1_Env.cloud_usage_cost[len(modality_indices)]
             
-            excess_latency.append(max(0, total_latency - self.CustomEnv.latency_budget))
-            excess_usage.append(max(0, total_usage - self.CustomEnv.usage_budget) * 1000)
+            excess_latency.append(max(0, total_latency - self.M4A1_Env.latency_budget))
+            excess_usage.append(max(0, total_usage - self.M4A1_Env.usage_budget) * 1000)
 
         penalty = -(torch.tensor(excess_latency).float().mean() + torch.tensor(excess_usage).float().mean())
         return penalty
@@ -199,7 +199,7 @@ class RC_PPO(OnPolicyAlgorithm):
 
                 loss = policy_loss + self.ent_coef * entropy_loss + self.vf_coef * value_loss
 
-                if self.CustomEnv.Resource_Constraint:
+                if self.M4A1_Env.Resource_Constraint:
                     loss -= self.constraint_lambda * self.resource_constraint(rollout_data)
             
                 with torch.no_grad():
@@ -314,7 +314,7 @@ class RC_A2C(OnPolicyAlgorithm):
             self.policy_kwargs["optimizer_kwargs"] = dict(alpha=0.99, eps=rms_prop_eps, weight_decay=0)
         
         self.constraint_lambda = constraint_lambda
-        self.CustomEnv = env
+        self.M4A1_Env = env
         self.losses = []
 
         if _init_setup_model:
@@ -325,25 +325,25 @@ class RC_A2C(OnPolicyAlgorithm):
         excess_latency = []; excess_usage = []
         for obs, action in zip(rollout_data.observations, rollout_data.actions):
             total_latency = 0; total_usage = 0
-            for i in range(self.CustomEnv.time_span):
+            for i in range(self.M4A1_Env.time_span):
                 if obs[i*5] == 0:
-                    total_latency += self.CustomEnv.local_time
-                    total_usage += self.CustomEnv.local_usage_cost
+                    total_latency += self.M4A1_Env.local_time
+                    total_usage += self.M4A1_Env.local_usage_cost
                 elif obs[i*5] == 1:
                     modalities_from_state = obs[i*5+1:i*5+4].int().sum().item()
-                    total_latency += self.CustomEnv.cloud_time[modalities_from_state] 
-                    total_usage += self.CustomEnv.cloud_usage_cost[modalities_from_state] 
+                    total_latency += self.M4A1_Env.cloud_time[modalities_from_state] 
+                    total_usage += self.M4A1_Env.cloud_usage_cost[modalities_from_state] 
                 
             if action == 0:
-                total_latency += self.CustomEnv.local_time
-                total_usage += self.CustomEnv.local_usage_cost
+                total_latency += self.M4A1_Env.local_time
+                total_usage += self.M4A1_Env.local_usage_cost
             else:
                 modality_indices = action_to_modality_indices[action.item()]
-                total_latency += self.CustomEnv.cloud_time[len(modality_indices)]
-                total_usage += self.CustomEnv.cloud_usage_cost[len(modality_indices)]
+                total_latency += self.M4A1_Env.cloud_time[len(modality_indices)]
+                total_usage += self.M4A1_Env.cloud_usage_cost[len(modality_indices)]
             
-            excess_latency.append(max(0, total_latency - self.CustomEnv.latency_budget))
-            excess_usage.append(max(0, total_usage - self.CustomEnv.usage_budget) * 1000)
+            excess_latency.append(max(0, total_latency - self.M4A1_Env.latency_budget))
+            excess_usage.append(max(0, total_usage - self.M4A1_Env.usage_budget) * 1000)
 
         penalty = -(torch.tensor(excess_latency).float().mean() + torch.tensor(excess_usage).float().mean())
         return penalty
@@ -372,7 +372,7 @@ class RC_A2C(OnPolicyAlgorithm):
 
             loss = policy_loss + self.ent_coef * entropy_loss + self.vf_coef * value_loss
 
-            if self.CustomEnv.Resource_Constraint:
+            if self.M4A1_Env.Resource_Constraint:
                 loss -= self.constraint_lambda * self.resource_constraint(rollout_data)
             
             self.policy.optimizer.zero_grad()
@@ -483,7 +483,7 @@ class RC_DQN(OffPolicyAlgorithm):
         self.exploration_rate = 0.0
         
         self.constraint_lambda = constraint_lambda
-        self.CustomEnv = env
+        self.M4A1_Env = env
 
         if _init_setup_model:
             self._setup_model()
@@ -493,25 +493,25 @@ class RC_DQN(OffPolicyAlgorithm):
         excess_latency = []; excess_usage = []
         for obs, action in zip(rollout_data.observations, rollout_data.actions):
             total_latency = 0; total_usage = 0
-            for i in range(self.CustomEnv.time_span):
+            for i in range(self.M4A1_Env.time_span):
                 if obs[i*5] == 0:
-                    total_latency += self.CustomEnv.local_time
-                    total_usage += self.CustomEnv.local_usage_cost
+                    total_latency += self.M4A1_Env.local_time
+                    total_usage += self.M4A1_Env.local_usage_cost
                 elif obs[i*5] == 1:
                     modalities_from_state = obs[i*5+1:i*5+4].int().sum().item()
-                    total_latency += self.CustomEnv.cloud_time[modalities_from_state] 
-                    total_usage += self.CustomEnv.cloud_usage_cost[modalities_from_state] 
+                    total_latency += self.M4A1_Env.cloud_time[modalities_from_state] 
+                    total_usage += self.M4A1_Env.cloud_usage_cost[modalities_from_state] 
                 
             if action == 0:
-                total_latency += self.CustomEnv.local_time
-                total_usage += self.CustomEnv.local_usage_cost
+                total_latency += self.M4A1_Env.local_time
+                total_usage += self.M4A1_Env.local_usage_cost
             else:
                 modality_indices = action_to_modality_indices[action.item()]
-                total_latency += self.CustomEnv.cloud_time[len(modality_indices)]
-                total_usage += self.CustomEnv.cloud_usage_cost[len(modality_indices)]
+                total_latency += self.M4A1_Env.cloud_time[len(modality_indices)]
+                total_usage += self.M4A1_Env.cloud_usage_cost[len(modality_indices)]
             
-            excess_latency.append(max(0, total_latency - self.CustomEnv.latency_budget))
-            excess_usage.append(max(0, total_usage - self.CustomEnv.usage_budget) * 1000)
+            excess_latency.append(max(0, total_latency - self.M4A1_Env.latency_budget))
+            excess_usage.append(max(0, total_usage - self.M4A1_Env.usage_budget) * 1000)
 
         penalty = -(torch.tensor(excess_latency).float().mean() + torch.tensor(excess_usage).float().mean())
         return penalty
@@ -567,7 +567,7 @@ class RC_DQN(OffPolicyAlgorithm):
             current_q_values = torch.gather(current_q_values, dim=1, index=replay_data.actions.long())
             loss = F.smooth_l1_loss(current_q_values, target_q_values)
 
-            if self.CustomEnv.Resource_Constraint:
+            if self.M4A1_Env.Resource_Constraint:
                 loss -= self.constraint_lambda * self.resource_constraint(replay_data)
 
             losses.append(loss.item())
