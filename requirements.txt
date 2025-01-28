@@ -1,6 +1,6 @@
-einops==0.7.0
-labml-helpers==0.4.89
-labml-nn==0.4.136
-numpy==1.23.5
-torch==2.2.2
-torchvision==0.17.2
+python == 3.10.12
+numpy == 1.26.4
+torch == 2.2.1
+gymnasium == 0.28.1
+stable_baselines3 == 2.2.1
+scikit-learn == 1.5.1
