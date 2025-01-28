@@ -1,0 +1,6 @@
+einops==0.7.0
+labml-helpers==0.4.89
+labml-nn==0.4.136
+numpy==1.23.5
+torch==2.2.2
+torchvision==0.17.2
