@@ -5,7 +5,7 @@
             "Scenario_46_Modality_0_Activity_16.jpg",
             "Scenario_46_Modality_1_Activity_16.jpg",
             "Scenario_46_Modality_2_Activity_16.jpg"
-        ],
+        ], 
         "interactions": [
             {
                 "question": "I'm feeling a little hot right now, please turn the temperature down a bit.",
