@@ -3,7 +3,7 @@
 [![python](https://img.shields.io/badge/Python_3.10-306998?logo=python&logoColor=FFD43B)](https://www.python.org/downloads/release/python-31012/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-750014.svg)](https://opensource.org/licenses/MIT) 
 [![arXiv](https://img.shields.io/badge/arXiv-2502.11007-b31b1b.svg)](https://arxiv.org/abs/2502.11007)
-
+[![Award](https://img.shields.io/badge/🏆_Best_Paper_Runner--Up-MobiHoc_2025-FFB300?style=flat&logo=acm&logoColor=white)](#)
 
 ## 👨‍🍳 Use Case: Kitchen Activity Assistance with LLM
 
@@ -52,8 +52,6 @@ We introduce **M4AI**, a comprehensive dataset capturing the **four multi-** ele
 2. **Multi-Task:** Features four distinct tasks.
 3. **Multi-Dialogue:** Contains sequences of 2–5 dialogues.
 4. **Multi-LLM:** Incorporates four LLMs tailored for different purposes.
-
-*Currently, only a sample dataset with 100 examples is provided. The full dataset will be released upon the acceptance of the paper.*
 
 <div align="center">
     <img src="figures/M4A1.png" alt="overview" style="width:60%;"/>
