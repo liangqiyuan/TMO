@@ -1,14 +1,7 @@
-import numpy as np
 import json
-import gymnasium as gym
-from gymnasium import spaces
 from stable_baselines3 import PPO, A2C, DQN
-import random
 import pickle
-import re
-import torch
 from models import RC_PPO, RC_A2C, RC_DQN
-from sklearn.neighbors import NearestNeighbors
 
 from options import args_parser
 from utils import *
@@ -21,7 +14,7 @@ warnings.filterwarnings('ignore', category=RuntimeWarning)
 if __name__ == '__main__':
     args = args_parser()
 
-    with open('../data/M4A1.json', 'r') as f:
+    with open('../dataset/M4A1.json', 'r') as f:
         dataset = json.load(f)
 
     weights = [args.alpha, args.beta_association, args.beta_latency, args.beta_usage]

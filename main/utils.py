@@ -1,5 +1,4 @@
 import numpy as np
-import json
 import gymnasium as gym
 import random
 from sklearn.neighbors import NearestNeighbors
