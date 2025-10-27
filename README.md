@@ -3,7 +3,7 @@
 [![python](https://img.shields.io/badge/Python_3.10-306998?logo=python&logoColor=FFD43B)](https://www.python.org/downloads/release/python-31012/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-750014.svg)](https://opensource.org/licenses/MIT) 
 [![arXiv](https://img.shields.io/badge/arXiv-2502.11007-b31b1b.svg)](https://arxiv.org/abs/2502.11007)
-[![Award](https://img.shields.io/badge/🏆_Best_Paper_Runner--Up-MobiHoc_2025-FFB300?style=flat&logo=acm&logoColor=white)](#)
+[![Award](https://img.shields.io/badge/🏆_Best_Paper_Runner--Up-MobiHoc_2025-FFB300?style=flat)](#)
 
 ## 👨‍🍳 Use Case: Kitchen Activity Assistance with LLM
 
