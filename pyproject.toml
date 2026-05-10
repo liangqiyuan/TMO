@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tmo"
+version = "0.2.0"
+description = "TMO: Device-Cloud Collaborative LLM Inference with Multi-Modal, Multi-Task, Multi-Turn Conversations"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+dependencies = [
+    "numpy == 2.2.6",
+    "torch == 2.8.0",
+    "gymnasium == 1.0.0",
+    "stable_baselines3 == 2.7.0",
+    "scikit-learn == 1.7.1",
+]
+
+[project.urls]
+"Paper"     = "https://arxiv.org/abs/2502.11007"
+
+[tool.setuptools]
+packages = ["tmo"]
