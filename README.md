@@ -4,8 +4,6 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-750014.svg)](https://opensource.org/licenses/MIT) 
 
 [![arXiv](https://img.shields.io/badge/arXiv-2502.11007-b31b1b.svg)](https://arxiv.org/abs/2502.11007)
-[![ToN'26](https://img.shields.io/badge/IEEE%2FACM_ToN-2026-00629B.svg)](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=90)
-[![MobiHoc'25](https://img.shields.io/badge/ACM_MobiHoc-2025-0085CA.svg?logo=acm&logoColor=white)](https://dl.acm.org/doi/10.1145/3704413.3764429)
 
 [![Award](https://img.shields.io/badge/🏆_Best_Paper_Runner--Up-MobiHoc_2025-FFB300?style=flat)](#)
 
