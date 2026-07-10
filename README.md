@@ -24,7 +24,7 @@ Imagine a scenario where an intelligent assistant helps you track activities in 
 
 ## 🔥 Our Framework
 
-We present **TMO** (Three-M Offloading), a local-cloud LLM inference system designed to optimize **response quality**, **latency**, and **cost efficiency** for LLMs in **multi-modal, multi-task, and multi-dialogue settings**. TMO dynamically adapts to diverse conversational demands across tasks such as assistance, query, recommendation, and message editing. To enhance performance, we propose resource-constrained RL, which selects the best LLMs and modalities for inference, balancing quality, latency, and cost. RCRL also integrates user prompt associations with multi-modal data to effectively manage task connections in decision-making.
+We present **TMO** (Three-M Offloading), a device-cloud LLM inference system designed to optimize **response quality**, **latency**, and **cost efficiency** for LLMs in **multi-modal, multi-task, and multi-turn conversations**. TMO dynamically adapts to diverse conversational demands across tasks such as assistance, query, recommendation, and message editing. To enhance performance, we propose resource-constrained RL, which selects the best LLMs and modalities for inference, balancing quality, latency, and cost. RCRL also integrates user prompt associations with multi-modal data to effectively manage task connections in decision-making. The journal extension further introduces a resource-aware adaptation mechanism that generalizes to arbitrary user-specified resource budgets unseen during training.
 
 <div align="center">
     <img src="figures/RL.png" alt="overview" style="width:60%;"/>
@@ -44,12 +44,12 @@ pip install -r requirements.txt
 ```
 
 
-## 📚 M4AI Dataset
+## 📚 M4A1 Dataset
 
-We introduce **M4AI**, a comprehensive dataset capturing the **four multi-** elements **all in one** dataset:
+We introduce **M4A1**, a comprehensive dataset capturing the **four multi-** elements **all in one** dataset:
 1. **Multi-Modal:** Includes three different view images.
 2. **Multi-Task:** Features four distinct tasks.
-3. **Multi-Dialogue:** Contains sequences of 2–5 dialogues.
+3. **Multi-Turn:** Contains sequences of 2–5 conversational turns.
 4. **Multi-LLM:** Incorporates four LLMs tailored for different purposes.
 
 <div align="center">
