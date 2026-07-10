@@ -122,7 +122,7 @@ A runnable end-to-end template that ports TMO beyond M4A1 — different number o
 
 If you find our work useful, please consider citing:
 ```bibtex
-@article{yuan2026devicecloud,
+@article{yuan2026device,
   title={Device-Cloud Collaborative LLM Inference with Multi-Modal, Multi-Task, Multi-Turn Conversations},
   author={Yuan, Liangqi and Han, Dong-Jun and Wang, Shiqiang and Brinton, Christopher},
   journal={IEEE/ACM Transactions on Networking},
