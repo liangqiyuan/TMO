@@ -1,8 +1,11 @@
-## Local-Cloud Inference Offloading for LLMs in Multi-Modal, Multi-Task, Multi-Dialogue Settings
+## Device-Cloud Collaborative LLM Inference with Multi-Modal, Multi-Task, Multi-Turn Conversations
 
 [![python](https://img.shields.io/badge/Python_3.10-306998?logo=python&logoColor=FFD43B)](https://www.python.org/downloads/release/python-31012/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-750014.svg)](https://opensource.org/licenses/MIT) 
+
 [![arXiv](https://img.shields.io/badge/arXiv-2502.11007-b31b1b.svg)](https://arxiv.org/abs/2502.11007)
+[![ToN'26](https://img.shields.io/badge/IEEE%2FACM_ToN-Accepted-00629B.svg)](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=90)
+[![MobiHoc'25](https://img.shields.io/badge/ACM_MobiHoc-2025-0085CA.svg?logo=acm&logoColor=white)](https://dl.acm.org/doi/10.1145/3704413.3764429)
 
 [![Award](https://img.shields.io/badge/🏆_Best_Paper_Runner--Up-MobiHoc_2025-FFB300?style=flat)](#)
 
@@ -119,7 +122,24 @@ python scripts/run_main_experiment.py --repeat 3
 A runnable end-to-end template that ports TMO beyond M4A1 — different number of modalities, tasks, dialogue lengths, local hardware, or cloud endpoint — lives in [`custom/`](custom/README.md). It runs on a fully synthetic dataset (so it does not depend on M4A1), sweeps seven scaling configurations, and reports response, latency, usage, reward, and per-budget violation for `Local` / `Cloud` / `Random` baselines against the `(RC-)A2C` policy. See [`custom/README.md`](custom/README.md) for the value semantics and a copy-paste starting point.
 
 
-## 🙏 Acknowledgement
+## 📄 Citation
 
-The images in the M4A1 dataset are derived from the [ActionSense](https://action-sense.csail.mit.edu/) dataset.
+If you find our work useful, please consider citing:
+```bibtex
+@article{yuan2026devicecloud,
+  title={Device-Cloud Collaborative LLM Inference with Multi-Modal, Multi-Task, Multi-Turn Conversations},
+  author={Yuan, Liangqi and Han, Dong-Jun and Wang, Shiqiang and Brinton, Christopher},
+  journal={IEEE/ACM Transactions on Networking},
+  year={2026}
+}
+```
 
+```bibtex
+@inproceedings{yuan2025local,
+  title={Local-Cloud Inference Offloading for LLMs in Multi-Modal, Multi-Task, Multi-Dialogue Settings},
+  author={Yuan, Liangqi and Han, Dong-Jun and Wang, Shiqiang and Brinton, Christopher},
+  booktitle={Proceedings of the Twenty-Sixth International Symposium on Theory, Algorithmic Foundations, and Protocol Design for Mobile Networks and Mobile Computing},
+  pages={201--210},
+  year={2025}
+}
+```
